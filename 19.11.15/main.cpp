@@ -7,9 +7,50 @@
 //
 
 #include <iostream>
-
+#include <string>
+#include <string.h>
+#include <map>
+using namespace std;
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+   cout<<"dfjgfd"<<endl;
+    map<string,long> m;
+    string name;
+    long len;
+    long n,mm;
+    cin>>n>>mm;
+    for(long i=0;i<n;i++)
+    {
+        cin>>name>>len;
+        if(len<mm)
+        {
+            m[name]+=mm;
+        }
+        else
+        {
+            m[name]+=len;
+        }
+        
+    }
+    cin>>n;
+    for(long i=0;i<n;i++)
+    {
+        cin>>name;
+        if(m[name]==0)
+        {
+            cout<<"No Info"<<endl;
+        }
+        else{
+            cout<<m[name]<<endl;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     return 0;
 }
